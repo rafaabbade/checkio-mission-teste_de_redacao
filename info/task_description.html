@@ -1,22 +1,33 @@
 <!-- Describe task in general -->
 <p>
-    {{TIPO}}
+    <strong>Verificação de Aprendizagem:</strong> Avalie sua compreensão. Tente resolver sem consultar materiais, usando apenas seu conhecimento. Identifique áreas que precisam de revisão.
 </p>
 <h4>Enunciado</h4>
 
 <p>
-    {{ENUNCIADO}}
+    Você é estagiário em uma empresa que está desenvolvendo um corretor automático de redações. Sua tarefa é criar a função que verifica se uma redação, dada como uma lista de palavras, é válida.
+
+Uma redação é válida se obedecer **todas** as seguintes regras:
+1.  Deve ter no mínimo **N** palavras e no máximo **M** palavras.
+2.  Deve ter no mínimo **M/2** palavras *distintas*.
+3.  Cada palavra deve ter no mínimo 1 letra e no máximo 10 letras.
+4.  Cada palavra deve ser composta **apenas** por letras minúsculas (a-z), sem números, acentos ou pontuação.
+
+Escreva a função `verificar_redacao` que recebe N, M e a lista de palavras, e retorna "OK" se a redação for válida, ou "Inválido" caso contrário.
+
+Restrições:
+- M é sempre par.
 </p>
 
 
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Entrada: </strong> {{ENTRADA}}
+    <strong>Entrada: </strong> Um inteiro N (mínimo de palavras), um inteiro M (máximo de palavras) e uma lista de strings `palavras` (a redação).
 </p>
 
 <p>
-    <strong>Saída: </strong> {{SAIDA}}
+    <strong>Saída: </strong> A string "OK" ou "Inválido".
 </p>
 
 
@@ -32,11 +43,13 @@ countConsecutiveSummers(99) == 6
 </pre>
 {% else %}
 <pre class="brush: python">
-    {{EXEMPLOS}}
+    verificar_redacao(2, 10, ["melhor", "que", "machado", "de", "assis"]) >> "OK"
 </pre>
 {% endif %}
 </div>
 <h4>Habilidades</h4>
 <ul>
-    {{HABILIDADES}}
+    Manipulação de Strings
+Lógica de Condições e Decisões
+Controle de Fluxo e Iteração
 </ul>

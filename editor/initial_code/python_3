@@ -1,1 +1,24 @@
-{{CODIGO INICIAL}}
+def verificar_redacao(n, m, palavras):
+    # Seu código aqui
+    return ""
+
+print("Example:")
+print(verificar_redacao(2, 10, ["melhor", "que", "machado", "de", "assis"]))
+
+# Exemplos do enunciado
+assert verificar_redacao(2, 10, ["melhor", "que", "machado", "de", "assis"]) == "OK"
+assert verificar_redacao(6, 6, "b c d e f g".split()) == "OK"
+assert verificar_redacao(6, 8, "aa bb aa bb aa bb".split()) == "Inválido"
+
+# Casos adicionais
+assert verificar_redacao(3, 10, ["vida", "2vida", "real"]) == "Inválido"
+assert verificar_redacao(3, 10, ["vida", "real_mente", "ok"]) == "Inválido"
+assert verificar_redacao(3, 10, ["vida", "Real", "ok"]) == "Inválido"
+assert verificar_redacao(3, 10, ["aaaaaaaaaaa", "b", "c"]) == "Inválido" # 11 letras
+assert verificar_redacao(3, 10, ["", "vida", "real"]) == "Inválido"
+assert verificar_redacao(4, 10, ["vida", "real", "boa"]) == "Inválido"
+assert verificar_redacao(5, 10, ["palavra", "palavra", "palavra", "palavra", "palavra"]) == "Inválido"
+assert verificar_redacao(4, 10, ["abc", "def", "ghi", "jkl"]) == "Inválido"
+assert verificar_redacao(4, 10, ["abc", "def", "ghi", "jkl", "mno", "pqr"]) == "OK"
+
+print("Seu código passou pelos testes, clique em Check para avançar!")
